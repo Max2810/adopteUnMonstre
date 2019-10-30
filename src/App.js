@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios'
 import DisplayMonsters from './components/DisplayMonsters';
 import ButonPanier from './components/ButonPanier';
+import Navbar from './components/Navbar';
 
  const sampleMonster = 
   {
@@ -39,7 +40,8 @@ class App extends React.Component {
 
 render() {
     return (
-    <div className="card">
+    <div>
+      <Navbar/>
       <DisplayMonsters monster={this.state.monster}/>
       <button type="button" onClick={this.getMonster}>Get another monster</button>
       <ButonPanier/>
