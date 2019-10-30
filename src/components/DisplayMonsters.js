@@ -3,14 +3,15 @@ import './DisplayMonsters.css';
 
 function DisplayMonsters(props){
   return(
-  <div>
+  <div className="monster">
     <figure className="DisplayMonster">
       <img src={props.monster.picture} alt={props.monster.name} />
     <figcaption>
       <figure>{props.monster.description}</figure>
     </figcaption> 
     </figure>
-  </div>)
+  </div>
+  )
 }
 
 export default DisplayMonsters;
