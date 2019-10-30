@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios'
 import DisplayMonsters from './components/DisplayMonsters';
-
+import ButonPanier from './components/ButonPanier';
 
  const sampleMonster = 
  {
@@ -42,6 +42,7 @@ render() {
     <div>
       <DisplayMonsters monster={this.state.monster}/>
       <button type="button" onClick={this.getMonster}>Get another monster</button>
+      <ButonPanier/>
     </div>
   );
 }}
