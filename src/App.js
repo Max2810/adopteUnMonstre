@@ -30,9 +30,9 @@ class App extends React.Component {
     axios.get('https://hackathon-wild-hackoween.herokuapp.com/monsters')
       .then(response => response.data)
       .then(data =>{
-        console.log(data);
+        
         this.setState({
-                    monster: data.monsters[hasardMonster(19)],
+              monster: data.monsters[hasardMonster(19)],
         });
       });
   }
@@ -42,7 +42,7 @@ render() {
     <div>
       <DisplayMonsters monster={this.state.monster}/>
       <button type="button" onClick={this.getMonster}>Get another monster</button>
-      <ButonPanier/>
+      <ButonPanier monster={this.state.monster}/>
     </div>
   );
 }}

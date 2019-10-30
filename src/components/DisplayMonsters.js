@@ -11,7 +11,10 @@ function DisplayMonsters(props){
       <figure>{props.monster.description}</figure>
     </figcaption> 
     </figure>
-  </div>)
+      </div>
+  )
 }
 
 export default DisplayMonsters;
+
+//{console.log(props.monster.name)}
