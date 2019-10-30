@@ -1,5 +1,4 @@
 .App {
-  background-image: url('http://www.fanpop.com/clubs/after-dark/images/21838089/title/haunted-castle-photo'), no-repeat;
   text-align: center;
 }
 
@@ -10,4 +9,5 @@
 .card {
   border: black;
   border-radius: 3%;
+  align-content: center;
 }

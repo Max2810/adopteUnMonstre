@@ -6,7 +6,7 @@ function DisplayMonsters(props){
   <div className="monster">
     <figure className="DisplayMonster">
       <img src={props.monster.picture} alt={props.monster.name} />
-      <figcaption>
+      <figcaption className="info">
         <h2>{props.monster.name}</h2>
         <p>{props.monster.description}</p>
       </figcaption> 

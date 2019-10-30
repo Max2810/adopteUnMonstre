@@ -40,11 +40,11 @@ class App extends React.Component {
 
 render() {
     return (
-    <div>
+    <div className="card">
       <Navbar/>
       <DisplayMonsters monster={this.state.monster}/>
       <button type="button" onClick={this.getMonster}>Get another monster</button>
-      <ButonPanier/>
+      <ButonPanier />
     </div>
   );
 }}

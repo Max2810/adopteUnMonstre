@@ -1,10 +1,15 @@
 .monster {
-  background-color: #1c1e1f;
+  background: url("https://cdn.pixabay.com/photo/2016/11/06/07/20/haunted-castle-1802413_1280.jpg") no-repeat center;
   text-align: center;
   padding: 1%;
+  background-size: cover ;
 }
 
-/* .DisplayMonster > figcaption {
-  border: black;
-  border-radius: 3%;
-}  */
+h2, p {
+  color: white;
+}
+
+ .info{
+  border: 2px solid white;
+  border-radius: 2%;
+} 
