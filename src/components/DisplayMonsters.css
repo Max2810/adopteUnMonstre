@@ -1,3 +1,10 @@
 .monster {
-  background-color: gray;
+  background-color: #1c1e1f;
+  text-align: center;
+  padding: 1%;
 }
+
+/* .DisplayMonster > figcaption {
+  border: black;
+  border-radius: 3%;
+}  */

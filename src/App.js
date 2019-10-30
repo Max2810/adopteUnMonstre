@@ -39,9 +39,9 @@ class App extends React.Component {
 
 render() {
     return (
-    <div>
+    <div className="card">
       <DisplayMonsters monster={this.state.monster}/>
-      <button type="button" onClick={this.getMonster}>Get another monster</button>
+      <button className="buttonRandom" type="button" onClick={this.getMonster}>Get another monster</button>
     </div>
   );
 }}
