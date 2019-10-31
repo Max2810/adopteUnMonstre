@@ -1,7 +1,12 @@
 import React from 'react';
 import axios from 'axios'
 import DisplayMonsters from './components/DisplayMonsters';
+<<<<<<< HEAD
 import Navbar from './components/Navbar';
+=======
+import DisplayBasket from './components/DisplayBasket';
+import MaskButton from './components/MaskButon';
+>>>>>>> 7b60beed97195dded6a5604d6f904e7cdacd8fd7
 
  const sampleMonster = 
   {
@@ -38,17 +43,24 @@ class App extends React.Component {
   }
 
   ajoutPanier() {
-    this.setState({monstresBasket: [...this.state.monstresBasket, this.state.monster.name]
+    this.setState({monstresBasket: [...this.state.monstresBasket, this.state.monster.picture]
     })  
   }
 
 render() {
     return (
+<<<<<<< HEAD
     <div className="card">
       <Navbar/>
+=======
+    <div >
+>>>>>>> 7b60beed97195dded6a5604d6f904e7cdacd8fd7
       <DisplayMonsters monster={this.state.monster}/>
       <button type="button" onClick={this.getMonster}>Get another monster</button> 
       <button type="button" onClick={this.ajoutPanier}>Put in the Basket</button>
+      <button type="button" onClick={event => MaskButton ('pagePrinc', 'dispBask')} >See the Basket</button>
+      <DisplayBasket monstresBasket={this.state.monstresBasket}/>
+      
     </div>
   );
 }}
