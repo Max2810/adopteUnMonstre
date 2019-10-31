@@ -3,7 +3,7 @@ import './DisplayMonsters.css';
 
 function DisplayMonsters(props){
   return(
-  <div>
+  <div id="pagePrinc">
     <figure className="DisplayMonster">
       <img src={props.monster.picture} alt={props.monster.name} />
     <figcaption>

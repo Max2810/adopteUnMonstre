@@ -2,6 +2,7 @@ import React from 'react';
 import axios from 'axios'
 import DisplayMonsters from './components/DisplayMonsters';
 import DisplayBasket from './components/DisplayBasket';
+import MaskButton from './components/MaskButon';
 
  const sampleMonster = 
  {
@@ -43,12 +44,13 @@ class App extends React.Component {
 
 render() {
     return (
-    <div>
+    <div >
       <DisplayMonsters monster={this.state.monster}/>
       <button type="button" onClick={this.getMonster}>Get another monster</button> 
       <button type="button" onClick={this.ajoutPanier}>Put in the Basket</button>
+      <button type="button" onClick={event => MaskButton ('pagePrinc', 'dispBask')} >See the Basket</button>
       <DisplayBasket monstresBasket={this.state.monstresBasket}/>
-      <button type="button" onClick={()=>{}}>See the Basket</button>
+      
     </div>
   );
 }}
