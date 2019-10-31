@@ -1,6 +1,7 @@
 import React from 'react';
 import axios from 'axios'
 import DisplayMonsters from './components/DisplayMonsters';
+import DisplayBasket from './components/DisplayBasket';
 
  const sampleMonster = 
  {
@@ -36,7 +37,7 @@ class App extends React.Component {
   }
 
   ajoutPanier() {
-    this.setState({monstresBasket: [...this.state.monstresBasket, this.state.monster.name]
+    this.setState({monstresBasket: [...this.state.monstresBasket, this.state.monster.picture]
     })  
   }
 
@@ -46,6 +47,8 @@ render() {
       <DisplayMonsters monster={this.state.monster}/>
       <button type="button" onClick={this.getMonster}>Get another monster</button> 
       <button type="button" onClick={this.ajoutPanier}>Put in the Basket</button>
+      <DisplayBasket monstresBasket={this.state.monstresBasket}/>
+      <button type="button" onClick={()=>{}}>See the Basket</button>
     </div>
   );
 }}
