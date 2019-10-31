@@ -38,7 +38,7 @@ class App extends React.Component {
   }
 
   ajoutPanier() {
-    this.setState({monstresBasket: [...this.state.monstresBasket, this.state.monster.picture]
+    this.setState({monstresBasket: [...this.state.monstresBasket, this.state.monster.picture,]
     })  
   }
 
