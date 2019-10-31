@@ -12,5 +12,3 @@ function DisplayBasket(props){
 
 export default DisplayBasket
 
-//<img src={(props.monstresBasket).map(url => url)} alt="avatarimage"></img>
-//<img src={props.monstresBasket} alt="avatarimage"></img>
