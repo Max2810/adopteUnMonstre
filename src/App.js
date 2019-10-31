@@ -4,6 +4,7 @@ import DisplayMonsters from './components/DisplayMonsters';
 import Navbar from './components/Navbar';
 import DisplayBasket from './components/DisplayBasket';
 import MaskButton from './components/MaskButon';
+import PhotoFixe from './components/PhotoFixe';
 
  const sampleMonster = 
   {
@@ -45,13 +46,18 @@ class App extends React.Component {
 
 render() {
     return (
-    <div className="card">
-      <Navbar/>
-      <DisplayMonsters monster={this.state.monster}/>
-      <button type="button" onClick={this.getMonster}>Monstre suivant</button> 
-      <button type="button" onClick={this.ajoutPanier}>Ajouter au panier</button>
-      <button type="button" onClick={event => MaskButton ('pagePrinc', 'dispBask')}>Mon panier</button>
-      <DisplayBasket monstresBasket={this.state.monstresBasket}/>
+    <div>
+      <div className="card">
+        <Navbar/>
+        <DisplayMonsters monster={this.state.monster}/>
+        <button className="Bouton1" type="button" onClick={this.getMonster}>Monstre suivant</button> 
+        <button className="Bouton2" type="button" onClick={this.ajoutPanier}>Ajouter au panier</button>
+        <button className="Bouton3" type="button" onClick={event => MaskButton ('pagePrinc', 'dispBask')}>Mon panier</button>
+        <DisplayBasket monstresBasket={this.state.monstresBasket}/>
+      </div>
+      <div className="photos">
+        <PhotoFixe/>
+      </div>
     </div>
   );
 }}
