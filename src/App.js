@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import DisplayBasket from './components/DisplayBasket';
 import MaskButton from './components/MaskButon';
 import PhotoFixe from './components/PhotoFixe';
+import Footer from './components/Footer';
 
  const sampleMonster = 
   {
@@ -50,13 +51,18 @@ render() {
       <div className="card">
         <Navbar/>
         <DisplayMonsters monster={this.state.monster}/>
-        <button className="Bouton1" type="button" onClick={this.getMonster}>Monstre suivant</button> 
-        <button className="Bouton2" type="button" onClick={this.ajoutPanier}>Ajouter au panier</button>
-        <button className="Bouton3" type="button" onClick={event => MaskButton ('pagePrinc', 'dispBask')}>Mon panier</button>
-        <DisplayBasket monstresBasket={this.state.monstresBasket}/>
+        <div className="boutons">
+          <button  type="button" onClick={this.getMonster}>Monstre suivant</button> 
+          <button  type="button" onClick={this.ajoutPanier}>Ajouter au panier</button>
+          <button  type="button" onClick={event => MaskButton ('pagePrinc', 'dispBask')}>Mon panier</button>
+          <DisplayBasket monstresBasket={this.state.monstresBasket}/>
+        </div>
       </div>
       <div className="photos">
         <PhotoFixe/>
+      </div>
+      <div className="divfooter">
+        <Footer/>
       </div>
     </div>
   );

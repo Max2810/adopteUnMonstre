@@ -1,0 +1,13 @@
+p {
+  color:white;
+
+  display: flex;
+  display: inline-block;
+
+}
+
+.Footer {
+  display: flex;
+  justify-content: space-around;  
+  background-color: black;
+}
