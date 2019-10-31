@@ -1,7 +1,6 @@
 import React from 'react';
 import axios from 'axios'
 import DisplayMonsters from './components/DisplayMonsters';
-import ButonPanier from './components/ButonPanier';
 import Navbar from './components/Navbar';
 
  const sampleMonster = 
@@ -20,12 +19,12 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      monster: sampleMonster
+      monster: sampleMonster,
+      monstresBasket: []
     };
     this.getMonster = this.getMonster.bind(this);
+    this.ajoutPanier = this.ajoutPanier.bind(this);
   }
-
-  
 
   getMonster() {
     axios.get('https://hackathon-wild-hackoween.herokuapp.com/monsters')
@@ -38,16 +37,22 @@ class App extends React.Component {
       });
   }
 
+  ajoutPanier() {
+    this.setState({monstresBasket: [...this.state.monstresBasket, this.state.monster.name]
+    })  
+  }
+
 render() {
     return (
     <div className="card">
       <Navbar/>
       <DisplayMonsters monster={this.state.monster}/>
-      <button type="button" onClick={this.getMonster}>Get another monster</button>
-      <ButonPanier />
+      <button type="button" onClick={this.getMonster}>Get another monster</button> 
+      <button type="button" onClick={this.ajoutPanier}>Put in the Basket</button>
     </div>
   );
 }}
 
 export default App;
+
 
