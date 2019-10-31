@@ -4,11 +4,8 @@ import './DisplayBasket.css';
 function DisplayBasket(props){
   return(
   <div id="dispBask">
-    <img src={(props.monstresBasket).map(url => url)} alt="avatarimage"></img>
-    
-      {console.log(props.monstresBasket)}
-      
-   
+    <h2>Mon panier</h2>
+    <img src={(props.monstresBasket).map(url => url)} alt="avatarimage"></img> 
   </div>
   )
 }
